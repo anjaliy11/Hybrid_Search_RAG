@@ -1,17 +1,15 @@
 ## 🚀 Hybrid Search Retrieval System
-Semantic + Lexical Search for High-Accuracy Information Retrieval
-<p align="center"> <img src="https://img.shields.io/badge/Language-Python%203.10+-blue.svg"/> <img src="https://img.shields.io/badge/Notebook-Jupyter-orange.svg"/> <img src="https://img.shields.io/badge/Search-Hybrid%20(BM25%20%2B%20Embeddings)-green.svg"/> <img src="https://img.shields.io/badge/License-MIT-purple.svg"/> <img src="https://img.shields.io/github/last-commit/your-username/your-repo-name?color=yellow"/> </p>
+<p align="center"> <img src="https://img.shields.io/badge/Python-3.10+-blue.svg"/> <img src="https://img.shields.io/badge/RAG-Hybrid%20Search-brightgreen.svg"/> <img src="https://img.shields.io/badge/Framework-LangChain-orange.svg"/> <img src="https://img.shields.io/badge/VectorDB-Pinecone-blueviolet.svg"/> <img src="https://img.shields.io/badge/Agents-CrewAI-red.svg"/> <img src="https://img.shields.io/badge/License-MIT-purple.svg"/> </p>
 
 ## 📌 Overview
 
-This repository contains an experimental implementation of a Hybrid Search Retrieval System, combining:
-
-Semantic Vector Embeddings (meaning-based search)
-
-BM25 Sparse Text Scoring (keyword-based search)
-
-Hybrid search significantly improves retrieval performance for RAG systems, knowledge bases, question-answering, and domain-specific search engines.
-
+This project implements a full end-to-end Hybrid Search RAG pipeline using:
+*   Pinecone Vector Database (dense embeddings)
+*   BM25 Sparse Search (lexical retrieval)
+*   LangChain (embedding, text splitting, retrieval, LLM pipeline)
+*   CrewAI Agents (automated RAG workflow orchestration)
+*   Hybrid search = Semantic + Sparse BM25 scoring, fused together to maximize accuracy, especially for technical or domain-heavy datasets.
+  
 The core logic is demonstrated inside a single notebook:
 📄 experiments.ipynb
 
@@ -19,20 +17,44 @@ BM25 values are precomputed in:
 📄 bm25_values.json
 
 ---
+
+## ⚙️ Tech Stack
+
+🧠 LLM & Embeddings
+
+LangChain
+
+Sentence Transformers or Any embedding model
+
+🗂 Vector Store
+
+PineconeDB (namespace-level storage, metadata filtering)
+
+🔎 Sparse Search
+
+BM25 using rank-bm25
+
+🤖 Autonomous Agents
+
+CrewAI
+
+Multi-role retrieval & reasoning agent design
+
+---
 ## ⚙️ Installation
 1️⃣ Clone the Repo
 
 git clone https://github.com/anjaliy11/Hybrid_Search_RAG.git
 
-cd hybrid-search
+
 
 ## 2️⃣ Create Virtual Environment
 
 python -m venv venv
 
-source venv/bin/activate   # macOS / Linux
+source venv/bin/activate      ## macOS / Linux
 
-venv\Scripts\activate      # Windows
+venv\Scripts\activate          ## Windows
 
 ## 3️⃣ Install Requirements
 pip install -r requirements.txt
@@ -83,7 +105,9 @@ FAQ and customer support bots
 
 ## 🚀 Sample Queries
 "What is hybrid information retrieval?"
+
 "Explain lexical vs semantic search"
+
 "Find documents about index fusion technique"
 
 
@@ -106,4 +130,5 @@ There are multi-topic overlaps
 ## 🤝 Contributing
 
 Pull requests and suggestions are welcome!
+
 Please open an issue before major changes.
