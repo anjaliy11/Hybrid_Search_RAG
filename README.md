@@ -25,7 +25,7 @@ BM25 values are precomputed in:
 
 ## Hybrid Retrieval Pipeline
 
- ┌───────────────────┐
+┌───────────────────┐
  │   Text Corpus      │
  └─────────┬─────────┘
            │
@@ -63,7 +63,7 @@ BM25 values are precomputed in:
 ## ⚙️ Installation
 1️⃣ Clone the Repo
 
-git clone https://github.com/your-username/hybrid-search.git
+git clone https://github.com/anjaliy11/Hybrid_Search_RAG.git
 
 cd hybrid-search
 
