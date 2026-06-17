@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is retrieval-augmented generation and how does it reduce hallucinations?",
+    "ground_truth": "RAG combines a retrieval system with a generative model, fetching relevant documents to ground the generation in factual information, thereby reducing hallucinations by constraining outputs to retrieved evidence.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are Chain-of-Thought and Few-Shot prompting techniques?",
+    "ground_truth": "Chain-of-Thought prompting asks the model to show intermediate reasoning steps before answering. Few-Shot provides example input-output pairs in the prompt to demonstrate the desired format and behavior.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Explain overfitting and how cross-validation helps prevent it.",
+    "ground_truth": "Overfitting occurs when a model learns noise in training data and fails to generalize. Cross-validation splits data into multiple folds, training and evaluating on different subsets, giving a more reliable estimate of generalization.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does the Mixture of Experts architecture improve model efficiency?",
+    "ground_truth": "Mixture of Experts uses a gating network to route inputs to specialized sub-networks (experts), activating only a subset for each input. This allows scaling model capacity without proportionally increasing computation cost.",
+    "type": "single_hop",
+    "difficulty": "medium"
+  }
+]

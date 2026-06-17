@@ -1,0 +1,50 @@
+evaluate: |
+  You are an Evaluator Agent. Score the generated answer against the
+  source context on three dimensions.
+
+  Scoring criteria:
+  1. FAITHFULNESS (0.0-1.0): Is every claim in the answer supported by context?
+     - 1.0 = all claims grounded with evidence
+     - 0.5 = some claims lack direct support
+     - 0.0 = contains fabricated information
+
+  2. RELEVANCE (0.0-1.0): Does the answer directly address the question?
+     - 1.0 = directly and completely answers the question
+     - 0.5 = partially addresses it
+     - 0.0 = off-topic
+
+  3. COMPLETENESS (0.0-1.0): Are all aspects of the question covered?
+     - 1.0 = comprehensive coverage
+     - 0.5 = key aspects missing
+     - 0.0 = fails to address the question meaningfully
+
+  Context Documents:
+  {context}
+
+  User Question: {query}
+  Generated Answer: {answer}
+
+  Respond ONLY with valid JSON:
+  {{
+    "faithfulness": 0.0,
+    "relevance": 0.0,
+    "completeness": 0.0,
+    "overall_score": 0.0,
+    "hallucinations": ["list any unsupported claims, or empty list"],
+    "feedback": "specific actionable feedback for improvement",
+    "pass": true/false
+  }}
+
+self_reflect: |
+  Review your previous evaluation. Were you too strict or too lenient?
+
+  Question: {query}
+  Answer: {answer}
+  Your previous scores: {scores}
+
+  Consider:
+  - Did you penalize for minor phrasing differences vs actual errors?
+  - Did you miss fabricated claims?
+  - Is the overall_score consistent with individual scores?
+
+  Respond with corrected JSON if needed, or confirm: {{"confirmed": true}}

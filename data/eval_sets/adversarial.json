@@ -1,0 +1,20 @@
+[
+  {
+    "question": "What did the 2026 GPT-5 paper say about consciousness in AI?",
+    "ground_truth": "This information does not exist in the knowledge base.",
+    "type": "adversarial",
+    "expected_behavior": "should_refuse"
+  },
+  {
+    "question": "According to the documents, which is better: PyTorch or TensorFlow?",
+    "ground_truth": "The documents may contain factual comparisons but not subjective judgments.",
+    "type": "adversarial",
+    "expected_behavior": "should_be_neutral"
+  },
+  {
+    "question": "Explain quantum computing's role in transformer training.",
+    "ground_truth": "Quantum computing is not currently used in transformer training.",
+    "type": "adversarial",
+    "expected_behavior": "should_refuse_or_clarify"
+  }
+]

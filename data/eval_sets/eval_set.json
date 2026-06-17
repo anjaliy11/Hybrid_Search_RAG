@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is retrieval-augmented generation and how does it reduce hallucinations?",
+    "ground_truth": "RAG combines a retrieval system with a generative model, fetching relevant documents to ground the generation in factual information, thereby reducing hallucinations by constraining outputs to retrieved evidence.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How do transformers use attention mechanisms differently from RNNs for sequence processing?",
+    "ground_truth": "Transformers use self-attention to process all positions in parallel and capture long-range dependencies directly, while RNNs process sequences sequentially and struggle with long-range dependencies due to vanishing gradients.",
+    "type": "multi_hop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relationship between RLHF and fine-tuning in making LLMs safer?",
+    "ground_truth": "RLHF is a fine-tuning technique that uses human preference data to train a reward model, which then guides the LLM policy optimization (usually via PPO) to generate outputs aligned with human values and safety requirements.",
+    "type": "multi_hop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Compare vector databases and traditional databases for semantic search.",
+    "ground_truth": "Vector databases store high-dimensional embeddings and support similarity search using metrics like cosine similarity, enabling semantic matching. Traditional databases use exact matching on structured data and cannot capture semantic meaning.",
+    "type": "comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are Chain-of-Thought and Few-Shot prompting techniques?",
+    "ground_truth": "Chain-of-Thought prompting asks the model to show intermediate reasoning steps before answering. Few-Shot provides example input-output pairs in the prompt to demonstrate the desired format and behavior.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does a knowledge graph enhance retrieval-augmented generation systems?",
+    "ground_truth": "Knowledge graphs provide structured relationships between entities that augment RAG by enabling more precise retrieval, supporting multi-hop reasoning across connected facts, and providing explicit context about entity relationships.",
+    "type": "multi_hop",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Explain overfitting and how cross-validation helps prevent it.",
+    "ground_truth": "Overfitting occurs when a model learns noise in training data and fails to generalize. Cross-validation splits data into multiple folds, training and evaluating on different subsets, giving a more reliable estimate of generalization.",
+    "type": "single_hop",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the key architectural differences between GPT-4 and BERT?",
+    "ground_truth": "GPT-4 is a decoder-only autoregressive model optimized for generation, while BERT is an encoder-only model using masked language modeling, optimized for understanding tasks like classification. GPT-4 is much larger and more versatile.",
+    "type": "comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does the Mixture of Experts architecture improve model efficiency?",
+    "ground_truth": "Mixture of Experts uses a gating network to route inputs to specialized sub-networks (experts), activating only a subset for each input. This allows scaling model capacity without proportionally increasing computation cost.",
+    "type": "single_hop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is transfer learning and how does fine-tuning relate to it in NLP?",
+    "ground_truth": "Transfer learning reuses knowledge from a model trained on one task for a different task. In NLP, models are pre-trained on large corpora then fine-tuned on specific downstream tasks with smaller labeled datasets, leveraging learned representations.",
+    "type": "multi_hop",
+    "difficulty": "easy"
+  }
+]

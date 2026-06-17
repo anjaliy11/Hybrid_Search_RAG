@@ -1,0 +1,32 @@
+# Environment
+.venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# Data (large files)
+data/raw/
+data/chroma_db/
+data/processed/
+data/eval_results.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+*.egg-info/
+dist/
+build/

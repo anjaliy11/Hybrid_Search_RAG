@@ -1,0 +1,13 @@
+name: Completeness
+description: Measures coverage of all aspects in the query
+scale: 0.0 - 1.0
+criteria:
+  - All sub-questions or aspects are addressed
+  - No major gaps in the explanation
+  - Sufficient depth for the question complexity
+scoring:
+  1.0: All aspects thoroughly covered
+  0.8: Most aspects covered, minor gaps
+  0.5: Key aspects missing
+  0.2: Only partially addresses the question
+  0.0: Fails to address any aspect meaningfully

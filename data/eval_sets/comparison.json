@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Compare vector databases and traditional databases for semantic search.",
+    "ground_truth": "Vector databases store high-dimensional embeddings and support similarity search using metrics like cosine similarity, enabling semantic matching. Traditional databases use exact matching on structured data and cannot capture semantic meaning.",
+    "type": "comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the key architectural differences between GPT-4 and BERT?",
+    "ground_truth": "GPT-4 is a decoder-only autoregressive model optimized for generation, while BERT is an encoder-only model using masked language modeling, optimized for understanding tasks like classification. GPT-4 is much larger and more versatile.",
+    "type": "comparison",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,15 @@
+decompose: |
+  You are a Research Agent. Decompose the query into searchable sub-questions.
+
+  Rules:
+  1. Simple queries → return as-is
+  2. Complex/multi-hop → 2-4 independent sub-questions
+  3. Each sub-question must be self-contained
+  4. Order by dependency (prerequisites first)
+
+  Query: {query}
+  Context: {context}
+
+  Respond ONLY valid JSON:
+  {{"is_complex": bool, "sub_queries": ["q1", "q2"], "plan": "combination strategy"}}
+

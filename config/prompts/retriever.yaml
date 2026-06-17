@@ -1,0 +1,36 @@
+strategy: |
+  You are a Retrieval Strategy Agent. Given a query and previous retrieval
+  attempts, decide the optimal retrieval approach.
+
+  Available strategies:
+  - hybrid: Combined dense semantic + sparse keyword search (default)
+  - dense_only: Pure semantic similarity (good for conceptual queries)
+  - sparse_only: Pure keyword matching (good for specific terms, names, acronyms)
+  - expanded: Reformulate query with synonyms before searching
+
+  Query: {query}
+  Previous attempts: {attempts}
+  Previous feedback: {feedback}
+
+  Consider:
+  - If previous retrieval returned irrelevant results, try a different strategy
+  - If query has specific technical terms, sparse may help
+  - If query is conceptual/abstract, dense is better
+  - If first attempt failed, try expanded reformulation
+
+  Respond ONLY with valid JSON:
+  {{"strategy": "hybrid|dense_only|sparse_only|expanded", "reformulated_query": "optional rewrite", "reason": "brief"}}
+
+query_expansion: |
+  Expand this search query with synonyms and related terms to improve recall.
+
+  Original query: {query}
+  Domain: AI/ML technical literature
+
+  Rules:
+  1. Add 2-3 synonym phrases
+  2. Keep the original intent
+  3. Don't change the meaning
+  4. Include acronym expansions if applicable
+
+  Respond with the expanded query as a single string (no JSON).

@@ -1,0 +1,26 @@
+[
+  {
+    "question": "How do transformers use attention mechanisms differently from RNNs for sequence processing?",
+    "ground_truth": "Transformers use self-attention to process all positions in parallel and capture long-range dependencies directly, while RNNs process sequences sequentially and struggle with long-range dependencies due to vanishing gradients.",
+    "type": "multi_hop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relationship between RLHF and fine-tuning in making LLMs safer?",
+    "ground_truth": "RLHF is a fine-tuning technique that uses human preference data to train a reward model, which then guides the LLM policy optimization (usually via PPO) to generate outputs aligned with human values and safety requirements.",
+    "type": "multi_hop",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does a knowledge graph enhance retrieval-augmented generation systems?",
+    "ground_truth": "Knowledge graphs provide structured relationships between entities that augment RAG by enabling more precise retrieval, supporting multi-hop reasoning across connected facts, and providing explicit context about entity relationships.",
+    "type": "multi_hop",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is transfer learning and how does fine-tuning relate to it in NLP?",
+    "ground_truth": "Transfer learning reuses knowledge from a model trained on one task for a different task. In NLP, models are pre-trained on large corpora then fine-tuned on specific downstream tasks with smaller labeled datasets, leveraging learned representations.",
+    "type": "multi_hop",
+    "difficulty": "easy"
+  }
+]

@@ -1,0 +1,15 @@
+
+name: Faithfulness
+description: Measures whether every claim in the answer is supported by context
+scale: 0.0 - 1.0
+criteria:
+  - All factual claims must have evidence in provided context
+  - Numbers, dates, names must exactly match source
+  - Inferences must be logically derivable from context
+  - Score 0.0 if any fabricated information is present
+scoring:
+  1.0: Every claim fully supported
+  0.8: Minor unsupported details (word choice, not facts)
+  0.5: Some claims lack direct support
+  0.2: Multiple unsupported claims
+  0.0: Contains fabricated information

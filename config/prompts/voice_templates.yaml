@@ -1,0 +1,55 @@
+voice_format: |
+  Reformat this answer for spoken voice/TTS delivery.
+
+  Formatting rules:
+  1. Spell out abbreviations on first use:
+     - "RAG" → "R-A-G, or Retrieval Augmented Generation"
+     - "LLM" → "L-L-M, or Large Language Model"
+     - "NLP" → "N-L-P, or Natural Language Processing"
+  2. Use short sentences (maximum 15-20 words each)
+  3. Replace citation brackets naturally:
+     - "[Doc 1]" → "According to the first source document"
+     - "[Doc 2]" → "The second source indicates that"
+  4. Use spoken transitions:
+     - "First, ...", "Additionally, ...", "Finally, ...", "In summary, ..."
+  5. Avoid parenthetical asides entirely
+  6. Spell out special characters:
+     - ">" → "greater than"
+     - "%" → "percent"
+     - Numbers: "15" → "fifteen"
+  7. Make it conversational but informative
+  8. Spell out emails and URLs character by character
+
+  Original answer:
+  {answer}
+
+  Voice-optimized version:
+
+phone_greeting: |
+  Generate a brief, professional phone greeting for a finance AI agent.
+
+  Context: {context}
+  Agent name: {agent_name}
+  Purpose: {purpose}
+
+  Rules:
+  1. Under 30 words
+  2. State name and purpose clearly
+  3. Ask one clear question to begin
+  4. Professional but warm tone
+
+  Greeting:
+
+confirmation: |
+  Generate a voice confirmation message.
+
+  Action completed: {action}
+  Details: {details}
+
+  Rules:
+  1. Confirm what was done in plain language
+  2. Spell out any numbers, dates, or amounts
+  3. Ask if anything else is needed
+  4. Under 40 words
+
+  Confirmation:

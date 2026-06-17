@@ -1,0 +1,13 @@
+name: Relevance
+description: Measures whether the answer addresses the user's question
+scale: 0.0 - 1.0
+criteria:
+  - Answer directly addresses the core question
+  - No major tangential information
+  - Appropriate level of detail for the question type
+scoring:
+  1.0: Directly and completely addresses the question
+  0.8: Addresses the question with minor tangents
+  0.5: Partially addresses the question
+  0.2: Mostly off-topic
+  0.0: Does not address the question at all
